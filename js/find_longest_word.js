@@ -1,12 +1,13 @@
 function LongestWord(sen) {
+    var wordClean = sen.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ");
     var longest = "";
-    var words = sen.split(" ");
-    for (i = 0; i < words.length; i++) {
-        if (longest.length < words[i].length) {
-            longest = words[i];
+    for (i = 0; i < wordClean.length; i++) {
+        if (longest.length < wordClean[i].length) {
+            longest = wordClean[i];
         }
     }
     return longest;
-};
-var r = "Hello how r u today";
-console.log(LongestWord(r));
+}
+
+console.log(LongestWord("hello hellohello oh,, sis"));
+console.log(LongestWord("hello hellohello dongdoing oh,, sis"));
