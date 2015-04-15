@@ -6,7 +6,7 @@ function transform(text) {
       default:  return String.fromCharCode(1 + c.charCodeAt(0));
     }
   });
-  return caesar.replace(/[aeiou]+/g, function(vowel) {
+  return caesar.replace(/[aeiou]/g, function(vowel) {
     return vowel.toUpperCase();
   });
 }

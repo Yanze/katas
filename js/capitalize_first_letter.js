@@ -1,4 +1,4 @@
-function LetterCapitalize(str) {
+function LetterCapitalize(str) { //?????
   var word = str.split(" ");
   var capitalized =[];
   for(i = 0; i < word.length; i++){
