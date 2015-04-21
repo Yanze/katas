@@ -1,4 +1,4 @@
 # katas
 Everyday Exercieses.
-also include Coderbyte easy level solutions
+Also include Coderbyte easy level solutions
 
