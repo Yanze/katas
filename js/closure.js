@@ -19,3 +19,5 @@ function mystery3(param) {
     }
     return mystery4;
 }
+
+what is the result ? 
