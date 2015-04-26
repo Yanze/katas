@@ -19,3 +19,24 @@ function mystery3(param) {
     }
     return mystery4;
 }
+
+
+
+
+
+
+
+
+
+function makeMysteryFunction(makerValue){
+  var newFunction = function doMysteriousThing(param)
+  {
+    return makerValue + param;
+};
+return newFunction;
+}
+
+var mysteryFunction3 = makeMysteryFunction(3);
+var mysteryFunction5 = makeMysteryFunction(5);
+
+mysteryFunction3(10) + mysteryFunction5(5) // 23
