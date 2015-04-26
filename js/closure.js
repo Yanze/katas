@@ -20,6 +20,7 @@ function mystery3(param) {
     return mystery4;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -40,3 +41,6 @@ var mysteryFunction3 = makeMysteryFunction(3);
 var mysteryFunction5 = makeMysteryFunction(5);
 
 mysteryFunction3(10) + mysteryFunction5(5) // 23
+=======
+what is the result ? 
+>>>>>>> e06cb264eb0511a87ce82cddea5916ab452c567c
