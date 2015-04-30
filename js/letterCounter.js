@@ -1,23 +1,34 @@
-function ArrayAdditionI(arr) {
-    var sortedNum = arr.sort(function (a, b) {
-        return a - b
-    });
-    var biggestNum = sortedNum.pop();
-    var sum = sortedNum.reduce(function (a, b) {
-        return a + b
-    });
-    for (var i = 0; i < sortedNum.length; i++) {
-        if (sum - sortedNum[i] === biggestNum) {
-            return true;
-        }
-        if (sum === biggestNum) {
-            return true;
+function LetterCountI(str) {
+    var longgestWord;
+    var maxFound = 0;
+    var cleanStr = str.toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ");
+    for (var i = 0; i < cleanStr.length; i++) {
+        var current = cleanStr[i];
+        var CharmaxNumber = charCounter(current);
+        if (maxFound < CharmaxNumber) {
+            maxFound = CharmaxNumber;
+            longgestWord = current;
         }
     }
-    return false;
+    if (maxFound == 1) {
+        return -1;
+    }
+    return longgestWord;
 }
 
-
-console.log(ArrayAdditionI([4, 6, 23, 10, 1, 3]));
-console.log(ArrayAdditionI([3, 5, -1, 8, 12]));
-console.log(ArrayAdditionI([5,7,16,1,2]));
+function charCounter(word) {
+    var maxCharNum = 0;
+    var counter = {};
+    for (var i = 0; i < word.length; i++) {
+        var current = word[i];
+        if (counter[current]) {
+            counter[current]++;
+        } else {
+            counter[current] = 1;
+        }
+        if (maxCharNum < counter[current]) {
+            maxCharNum = counter[current];
+        }
+    }
+    return maxCharNum;
+}
