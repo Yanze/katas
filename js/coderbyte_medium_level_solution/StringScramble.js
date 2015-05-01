@@ -9,12 +9,23 @@ function StringScramble(str1, str2) {
             }
         }
     }
-    if (allChars === str2) {
-        return true;
-    } else {
-        return false;
-    }
-
+    return allChars === str2;
 }
+
+
+//another way
+
+function StringScramble2(str1, str2) {
+    var str1Array = str1.split("");
+    for (var i = 0; i < str2.length; i++) {
+        var pos = str1Array.indexOf(str2[i]);
+        str1Array.splice(pos, 1);
+        if(pos === -1){
+            return false;
+        }
+    }
+    return true;
+}
+
 console.log(StringScramble("coodrebtqqkye", "coderbyte"));
 console.log(StringScramble("winlllwesr", "winner"));
