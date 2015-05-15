@@ -20,3 +20,16 @@ function LetterCapitalize(str) {
   }
   return letters.join(" ");
 }
+
+// string capitalize method
+String.prototype.toJadenCase = function () {
+    var myArr = this.split(" ");
+    var final = [];
+    for (var i = 0; i < myArr.length; i++) {
+        final.push(myArr[i].toUpperCase().charAt(0) + myArr[i].slice(1));
+    }
+    return final.join(" ");
+}
+
+var str = "How can mirrors be real if our eyes aren't real";
+console.log(str.toJadenCase());
